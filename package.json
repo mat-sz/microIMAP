@@ -1,0 +1,60 @@
+{
+  "name": "microimap",
+  "version": "0.0.1",
+  "description": "Lightweight IMAP client/server library for node.js.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client/index.js",
+    "./server": "./lib/server/index.js"
+  },
+  "keywords": [
+    "email",
+    "e-mail",
+    "mail",
+    "imap",
+    "client",
+    "server",
+    "typescript"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mat-sz/microIMAP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mat-sz/microIMAP/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "__tests__/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "homepage": "https://github.com/mat-sz/microIMAP",
+  "author": "Mat Sz <contact@matsz.dev>",
+  "license": "BSD-3-Clause-Clear",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.9.4",
+    "husky": "^7.0.2",
+    "jest": "^27.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  }
+}
